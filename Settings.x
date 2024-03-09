@@ -26,7 +26,7 @@ NSBundle *RYMDBundle() {
     settingMenuItem.inkEnabled = YES;
     settingMenuItem.selectBlock = ^BOOL(YTSettingsCell *cell, NSUInteger arg1) {
         YTMSettingsResponseViewController *responseVC = [[%c(YTMSettingsResponseViewController) alloc] initWithService:[self valueForKey:@"_service"] parentResponder:self];
-        responseVC.title = @(TWEAK_NAME);
+        responseVC.title = [%c(YTCommonUtils) isSmallDevice] ? @(SHORT_TWEAK_NAME) : @(TWEAK_NAME);
         NSMutableArray <YTMSettingsSectionItem *> *settingItems = [NSMutableArray new];
         YTMSettingsSectionItem *enabled = [%c(YTMSettingsSectionItem) switchItemWithTitle:LOC(@"ENABLED")
             titleDescription:nil
@@ -76,7 +76,7 @@ NSBundle *RYMDBundle() {
     };
     YTMSettingsSectionController *settings = [[%c(YTMSettingsSectionController) alloc] initWithTitle:@"" items:@[settingMenuItem] parentResponder:[self parentResponder]];
     settings.categoryID = 'rytd';
-    [newSectionControllers addObject:settings];
+    [newSectionControllers insertObject:settings atIndex:0];
     return newSectionControllers;
 }
 

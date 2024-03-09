@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import <YouTubeHeader/GOOAlertView.h>
+#import <YouTubeHeader/YTCommonUtils.h>
 #import <YouTubeHeader/YTInnerTubeCollectionViewController.h>
 #import <YouTubeHeader/YTResponder.h>
 #import <YouTubeHeader/YTSettingsSectionController.h>
