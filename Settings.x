@@ -1,5 +1,9 @@
+#import <YouTubeHeader/GOOHeaderViewController.h>
+#import <YouTubeHeader/YTCommonUtils.h>
+#import <YouTubeMusicHeader/YTMAlertView.h>
+#import <YouTubeMusicHeader/YTMSettingsResponseViewController.h>
+#import <YouTubeMusicHeader/YTMSettingsSectionController.h>
 #import <rootless.h>
-#import "Header.h"
 #import "../Return-YouTube-Dislikes/Settings.h"
 #import "../Return-YouTube-Dislikes/TweakSettings.h"
 

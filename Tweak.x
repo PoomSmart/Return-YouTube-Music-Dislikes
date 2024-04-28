@@ -1,7 +1,8 @@
 #import <YouTubeHeader/YTLikeStatus.h>
 #import <YouTubeHeader/YTILikeButtonRenderer.h>
+#import <YouTubeMusicHeader/MDCButton.h>
+#import <YouTubeMusicHeader/YTMActionRowView.h>
 #import <HBLog.h>
-#import "Header.h"
 #import "../Return-YouTube-Dislikes/API.h"
 #import "../Return-YouTube-Dislikes/Vote.h"
 #import "../Return-YouTube-Dislikes/TweakSettings.h"
