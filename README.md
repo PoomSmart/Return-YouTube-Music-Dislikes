@@ -13,6 +13,7 @@ The tweak also provides an option to submit your like/dislike data to their RYD 
 - Clone this project and [Return YouTube Dislike](https://github.com/PoomSmart/Return-YouTube-Dislikes) alongside this project.
 - Use latest [Theos](https://github.com/theos/theos).
 - Clone [YouTubeHeader](https://github.com/PoomSmart/YouTubeHeader) to `$THEOS/include/YouTubeHeader`.
+- Clone [YouTubeMusicHeader](https://github.com/PoomSmart/YouTubeMusicHeader) to `$THEOS/include/YouTubeMusicHeader`.
 - Run `make` or `make package FINALPACKAGE=1` or `make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless` in your Terminal.
 
 ## Credits

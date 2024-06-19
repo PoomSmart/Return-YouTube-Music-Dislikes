@@ -1,5 +1,5 @@
 #import <YouTubeHeader/GOOHeaderViewController.h>
-#import <YouTubeHeader/YTCommonUtils.h>
+#import <YouTubeHeader/YTUIUtils.h>
 #import <YouTubeMusicHeader/YTMAlertView.h>
 #import <YouTubeMusicHeader/YTMSettingsResponseViewController.h>
 #import <YouTubeMusicHeader/YTMSettingsSectionController.h>
@@ -30,7 +30,7 @@ NSBundle *RYMDBundle() {
     settingMenuItem.inkEnabled = YES;
     settingMenuItem.selectBlock = ^BOOL(YTSettingsCell *cell, NSUInteger arg1) {
         YTMSettingsResponseViewController *responseVC = [[%c(YTMSettingsResponseViewController) alloc] initWithService:[self valueForKey:@"_service"] parentResponder:self];
-        responseVC.title = [%c(YTCommonUtils) isSmallDevice] ? @(SHORT_TWEAK_NAME) : @(TWEAK_NAME);
+        responseVC.title = [%c(YTUIUtils) appPortraitWidth] <= 320 ? @(SHORT_TWEAK_NAME) : @(TWEAK_NAME);
         NSMutableArray <YTMSettingsSectionItem *> *settingItems = [NSMutableArray new];
         YTMSettingsSectionItem *enabled = [%c(YTMSettingsSectionItem) switchItemWithTitle:LOC(@"ENABLED")
             titleDescription:nil

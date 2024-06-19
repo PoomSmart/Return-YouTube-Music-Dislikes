@@ -1,4 +1,5 @@
 TARGET := iphone:clang:latest:11.0
+PACKAGE_VERSION = 1.0.1
 ARCHS = arm64
 INSTALL_TARGET_PROCESSES = YouTubeMusic
 
