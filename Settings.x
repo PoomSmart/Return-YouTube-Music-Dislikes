@@ -25,7 +25,7 @@ NSBundle *RYMDBundle() {
 - (NSArray <YTMSettingsSectionController *> *)sectionControllersFromSettingsResponse:(id)response {
     NSBundle *tweakBundle = RYMDBundle();
     NSMutableArray <YTMSettingsSectionController *> *newSectionControllers = [NSMutableArray arrayWithArray:%orig];
-    YTMSettingsSectionItem *settingMenuItem = [%c(YTMSettingsSectionItem) itemWithTitle:@(TWEAK_NAME) accessibilityIdentifier:nil detailTextBlock:nil selectBlock:^BOOL(YTSettingsCell *cell, NSUInteger arg1) { return YES; }];
+    YTMSettingsSectionItem *settingMenuItem = [%c(YTMSettingsSectionItem) itemWithTitle:LOC(@"SETTINGS_TITLE") accessibilityIdentifier:nil detailTextBlock:nil selectBlock:^BOOL(YTSettingsCell *cell, NSUInteger arg1) { return YES; }];
     settingMenuItem.indicatorIconType = 221;
     settingMenuItem.inkEnabled = YES;
     settingMenuItem.selectBlock = ^BOOL(YTSettingsCell *cell, NSUInteger arg1) {
