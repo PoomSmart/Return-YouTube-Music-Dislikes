@@ -72,6 +72,16 @@ NSBundle *RYMDBundle() {
             }
             settingItemId:0];
         [settingItems addObject:exactLike];
+        YTMSettingsSectionItem *rawData = [%c(YTMSettingsSectionItem) switchItemWithTitle:LOC(@"RAW_DATA")
+            titleDescription:LOC(@"RAW_DATA_DESC")
+            accessibilityIdentifier:nil
+            switchOn:UseRawData()
+            switchBlock:^BOOL (YTSettingsCell *cell, BOOL enabled) {
+                [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:UseRawDataKey];
+                return YES;
+            }
+            settingItemId:0];
+        [settingItems addObject:rawData];
         YTMSettingCollectionSectionController *scsc = [[%c(YTMSettingCollectionSectionController) alloc] initWithTitle:@"" items:settingItems parentResponder:responseVC];
         [responseVC collectionViewController].sectionControllers = @[scsc];
         GOOHeaderViewController *headerVC = [[%c(GOOHeaderViewController) alloc] initWithContentViewController:responseVC];

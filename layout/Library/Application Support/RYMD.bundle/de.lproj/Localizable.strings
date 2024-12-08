@@ -1,5 +1,5 @@
 // Settings
-"SETTINGS_TITLE" = "Return YouTube Dislike";
+"SETTINGS_TITLE" = "Return YouTube Music Dislike";
 
 "ENABLED" = "Aktiviert";
 "ENABLE_VOTE_SUBMIT" = "Bewertungen übermitteln";
@@ -7,6 +7,8 @@
 "EXACT_LIKE_NUMBER" = "Exact like numbers";
 "EXACT_DISLIKE_NUMBER" = "Exact dislike numbers";
 "EXACT_DISLIKE_NUMBER_DESC" = "Display exact number of dislikes. For example: %@ -> %@.";
+"RAW_DATA" = "Rohdaten der Dislikes";
+"RAW_DATA_DESC" = "Verwenden Sie nur die Dislike-Daten von Personen, die die RYD-Browsererweiterung oder diesen Tweak verwenden.";
 
 // On app launch
 "WANT_TO_ENABLE" = "Möchten Sie die Übermittlung Ihrer Like-/Dislike-Bewertungen an %@ nun genehmigen? Sie können dies jederzeit in den Einstellungen > %@ > %@ wieder deaktivieren.";

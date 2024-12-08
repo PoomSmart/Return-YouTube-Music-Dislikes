@@ -1,5 +1,5 @@
 // Settings
-"SETTINGS_TITLE" = "Return YouTube Dislike";
+"SETTINGS_TITLE" = "Return YouTube Music Dislike";
 
 "ENABLED" = "Engedélyezve";
 "ENABLE_VOTE_SUBMIT" = "Szavazatküldés engedélyezése";
@@ -7,6 +7,8 @@
 "EXACT_LIKE_NUMBER" = "Exact like numbers";
 "EXACT_DISLIKE_NUMBER" = "Exact dislike numbers";
 "EXACT_DISLIKE_NUMBER_DESC" = "Display exact number of dislikes. For example: %@ -> %@.";
+"RAW_DATA" = "Nyers dislike adatok";
+"RAW_DATA_DESC" = "Csak azoknak az embereknek a dislike adatait használja, akik az RYD böngészőbővítményt vagy ezt a tweak-et használják.";
 
 // On app launch
 "WANT_TO_ENABLE" = "Engedélyezi a tetszésnyilvánítási/nemtetszésnyilvánítási adatok elküldését a %@ számára? Később letilthatja a Beállítások > %@ > %@ menüpontban.";

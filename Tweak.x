@@ -42,14 +42,14 @@ static void getVoteAndModifyButtons(
         HBLogDebug(@"RYMD: Vote data for video %@: %@", videoId, data);
         dispatch_async(dispatch_get_main_queue(), ^{
             if (ExactLikeNumber() && error == nil) {
-                NSNumber *likeNumber = data[@"likes"];
+                NSNumber *likeNumber = getLikeData(data);
                 NSString *likeCount = formattedLongNumber(likeNumber, nil);
                 if (likeCount && likeHandler) {
                     HBLogDebug(@"RYMD: Set like count for %@ to %@", videoId, likeCount);
                     likeHandler(likeCount, likeNumber);
                 }
             }
-            NSNumber *dislikeNumber = data[@"dislikes"];
+            NSNumber *dislikeNumber = getDislikeData(data);
             NSString *dislikeCount = getNormalizedDislikes(dislikeNumber, error);
             if (dislikeHandler) {
                 HBLogDebug(@"RYMD: Set dislike count for %@ to %@", videoId, dislikeCount);
@@ -71,14 +71,14 @@ static void getVoteAndModifyButtons(
     [self setNeedsLayout];
     getVoteFromVideoWithHandler(cache, renderer.target.videoId, maxRetryCount, ^(NSDictionary *data, NSString *error) {
         if (ExactLikeNumber()) {
-            NSString *likeText = getNormalizedDislikes(data[@"likes"], error);
+            NSString *likeText = getNormalizedDislikes(getLikeData(data), error);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [likeButton setTitle:likeText forState:UIControlStateNormal];
                 [likeButton ytm_sizeToFitWithSize:1];
                 [self setNeedsLayout];
             });
         }
-        NSString *dislikeText = getNormalizedDislikes(data[@"dislikes"], error);
+        NSString *dislikeText = getNormalizedDislikes(getDislikeData(data), error);
         dispatch_async(dispatch_get_main_queue(), ^{
             [dislikeButton setTitle:dislikeText forState:UIControlStateNormal];
             [dislikeButton ytm_sizeToFitWithSize:1];
