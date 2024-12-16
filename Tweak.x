@@ -208,6 +208,16 @@ static void getVoteAndModifyButtons(
 
 %end
 
+%hook YTLikeServiceImpl
+
+- (void)makeRequestWithStatus:(YTLikeStatus)likeStatus target:(YTILikeTarget *)target clickTrackingParams:(id)arg3 queueContextParams:(id)arg4 requestParams:(id)arg5 responseBlock:(id)arg6 errorBlock:(id)arg7 {
+    if (TweakEnabled() && VoteSubmissionEnabled())
+        sendVote(target.videoId, likeStatus);
+    %orig;
+}
+
+%end
+
 %ctor {
     cache = [NSCache new];
     %init;
