@@ -11,8 +11,9 @@
 #import <YouTubeMusicHeader/YTMNowPlayingViewController.h>
 #import <HBLog.h>
 #import "../Return-YouTube-Dislikes/API.h"
-#import "../Return-YouTube-Dislikes/Vote.h"
+#import "../Return-YouTube-Dislikes/Shared.h"
 #import "../Return-YouTube-Dislikes/TweakSettings.h"
+#import "../Return-YouTube-Dislikes/Vote.h"
 
 static NSCache <NSString *, NSDictionary *> *cache;
 

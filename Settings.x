@@ -1,9 +1,9 @@
+#import <PSHeader/Misc.h>
 #import <YouTubeHeader/GOOHeaderViewController.h>
 #import <YouTubeHeader/YTUIUtils.h>
 #import <YouTubeMusicHeader/YTMAlertView.h>
 #import <YouTubeMusicHeader/YTMSettingsResponseViewController.h>
 #import <YouTubeMusicHeader/YTMSettingsSectionController.h>
-#import <rootless.h>
 #import "../Return-YouTube-Dislikes/Settings.h"
 #import "../Return-YouTube-Dislikes/TweakSettings.h"
 
@@ -12,7 +12,7 @@ NSBundle *RYMDBundle() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSString *tweakBundlePath = [[NSBundle mainBundle] pathForResource:@"RYMD" ofType:@"bundle"];
-        bundle = [NSBundle bundleWithPath:tweakBundlePath ?: ROOT_PATH_NS(@"/Library/Application Support/RYMD.bundle")];
+        bundle = [NSBundle bundleWithPath:tweakBundlePath ?: PS_ROOT_PATH_NS(@"/Library/Application Support/RYMD.bundle")];
     });
     return bundle;
 }
