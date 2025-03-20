@@ -3,7 +3,6 @@ TARGET = iphone:clang:latest:15.0
 else
 TARGET = iphone:clang:latest:11.0
 endif
-PACKAGE_VERSION = 1.2.2
 ARCHS = arm64
 INSTALL_TARGET_PROCESSES = YouTubeMusic
 
